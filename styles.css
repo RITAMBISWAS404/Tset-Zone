@@ -22,6 +22,12 @@
     overflow-x: hidden;
   }
 
+  @media (max-width: 768px){
+    body {
+      margin-bottom: 3rem;
+    }
+  }
+
   /* Hide scrollbar for all WebKit/Blink browsers (Chrome, Safari, Opera) */
   body::-webkit-scrollbar {
     display: none; /* Hide scrollbar */
@@ -400,13 +406,13 @@
   .design-grid .span-11{
     grid-column: span 1;
     grid-row: span 1;
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/9;
   }
 
   .design-grid .span-2 {
       grid-column: span 1;
       grid-row: span 1;
-      aspect-ratio: 4/3;
+      aspect-ratio: 16/9;
   }
 }
 
@@ -561,8 +567,10 @@
 
   .skill-logo{
     height: 5rem;
+    width: 100%;
     aspect-ratio: 1;
     background-image: url("skill-logo-1.svg");
+    background-repeat: no-repeat;
     background-size: contain;
   }
   
@@ -573,8 +581,13 @@
   }
 
   @media (max-width: 768px){
+    .skill-logo{
+      background-position: center;
+    }
+
     .skill-card{
-      padding: 1rem;
+      padding: 1rem 0rem;
+      text-align: center;
     }
   }
 
@@ -613,6 +626,10 @@
     .exp h3{
       font-size: 3rem;
       padding: 1rem;
+    }
+
+    .skill-name{
+      margin: 0.5rem 0rem 0rem 0rem;
     }
   }
 
@@ -772,6 +789,10 @@
 
     .button-85{
       font-size: 1rem;
+    }
+
+    .mail-me p{
+      margin-bottom: 1rem;
     }
   }
 
