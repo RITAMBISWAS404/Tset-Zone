@@ -70,6 +70,7 @@
 }
 
 .mobile-logo h1 {
+  font-weight: 400;
   font-size: 3rem;
   line-height: 3rem;
   color: #333;
