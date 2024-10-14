@@ -827,6 +827,7 @@
       flex-direction: column;
       flex-wrap: nowrap;
       padding: 1rem;
+      gap: 0rem;
     }
 
     .exp-card{
