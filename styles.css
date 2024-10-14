@@ -70,7 +70,6 @@
 }
 
 .mobile-logo h1 {
-  font-weight: 400;
   font-size: 3rem;
   line-height: 3rem;
   color: #333;
@@ -194,9 +193,16 @@
     color: #888888;
     list-style: none;
   }
+
+  .nav-item ul li:hover{
+    transform: translateX(5px);
+    font-weight: bold;
+    color: #777777;
+  }
   
   .nav-item ul li {
     margin-bottom: 0.5rem;
+    transition: all 0.3s ease-in-out;
   }
   
   .trademark {
@@ -382,7 +388,7 @@
 
   @media (max-width: 768px){
     .project-item{
-      padding: 1rem 1rem;
+      padding: 2rem 1rem 2rem 1rem;
     }
   }
   
@@ -410,7 +416,7 @@
     aspect-ratio: 2/1;
     background-color: #f6f6f6;
     margin-top: 2.5rem;
-    border-radius: 1.0rem;
+    border-radius: 1rem;
   }
 
   @media (max-width: 768px){
@@ -490,19 +496,21 @@
 }
 
 .design-grid .box {
-    background-color: #f6f6f6;
+    background-color: #9dd040;
     /* padding: 2rem; */
     /* padding: 0.5rem; */
     text-align: left;
     border-radius: 1rem;
     /* aspect-ratio: 1 / 1; */
     transition: 0.5s;
+    overflow: hidden;
 }
 
 .design-grid .span-11{
     grid-column: span 1;
     grid-row: span 1;
     aspect-ratio: 4/3;
+
 }
 
 .design-grid .span-2 {
@@ -513,7 +521,7 @@
 
 @media (max-width: 768px){
   .design-grid{
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
 
   .design-grid{
@@ -537,9 +545,21 @@
 .des-img{
     height: 100%;
     width: 100%;
-    background-color: #f6f6f6;
-    border-radius: 3rem;
-    transition-duration: 1s;
+    transition: all 0.3s ease-in-out;
+}
+
+.des-img2{
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.des-img:hover{
+  transform: scale(1.05);
+}
+
+.des-img2:hover{
+  transform: scale(1.05);
 }
 
 .d1 .des-img2{
@@ -616,6 +636,12 @@
     background-image: url("SUR_5582.JPG");
     background-size: cover;
     background-position: top;
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .about-image:hover{
+    filter: grayscale(0%);
   }
   
   .skills-section h3{
@@ -644,8 +670,8 @@
       padding-right: 1rem;
       width: 100%;
       height: auto;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
       background-color: #181818;
     }
 
@@ -695,7 +721,14 @@
   .skill-card {
     padding: 1rem ;
     width: 100%;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
     /* background-color: #9dd040; */
+  }
+
+  .skill-card:hover{
+    background-color: #eeeeee;
+    transform: translateY(-5px);
   }
 
   @media (max-width: 768px){
@@ -766,17 +799,27 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 1rem;
     padding: 2.5rem 5rem;
     /* overflow-y: scroll; */
   }
 
   .exp-card{
     display: flex;
-    width: 50%;
+    /* width: 50%; */
+    min-width: 40%;
+    flex: 1;
     flex-direction: row;
     align-items: center;
     padding: 1rem;
     gap: 1rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .exp-card:hover{
+    transform: translateY(-5px);
+    background-color: #e6e6e6;
   }
 
   @media (max-width: 768px){
@@ -894,9 +937,16 @@
     font-weight: 400;
     color: #181818;
     background-color: #ffffff;
-    border: none;
+    border: 2px solid #ffffff;
     padding: 1rem 2rem;
     border-radius: 3rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .button-85:hover{
+    border: 2px solid #ffffff;
+    background-color: #181818;
+    color: #ffffff;
   }
 
   @media (max-width: 768px){
@@ -924,7 +974,15 @@
     font-weight: 400;
     cursor: pointer;
     border-bottom: 2px solid #bababa;
+    transition: font-size 0.3s ease, padding 0.3s ease, background-color 0.3s ease;
   }
+  
+  .social-item:hover {
+    font-size: 2rem;
+    padding: 1rem 4rem;
+    background-color: #f0f0f0; /* Change to your desired hover background color */
+  }
+  
 
   .git{
     border-bottom: none;
