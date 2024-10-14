@@ -24,7 +24,7 @@
 
   @media (max-width: 768px){
     body {
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
     }
   }
 
@@ -53,11 +53,92 @@
     border-right: 2px solid #bababa;
   }
 
-  @media (max-width: 768px){
-    .navbar{
-      display: none;
-    }
+  /* Mobile Navbar Styles */
+.mobile-navbar {
+  height: 4rem;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 2px solid #bababa;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+}
+
+.mobile-logo h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+  color: #333;
+  font-family: "Abhaya Libre", serif;
+}
+
+.hamburger {
+  font-size: 3rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Popup Menu Styles */
+
+.popup-content {
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Ensure the mobile navbar stays on top of the popup */
+.mobile-navbar {
+  z-index: 1002; /* Higher than the popup's z-index */
+}
+
+/* Styles for the arrow-down icon */
+.hamburger.arrow-down {
+  content: '⬓';
+}
+
+/* Popup Menu Styles */
+.mobile-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 2px solid #bababa;
+  z-index: 1001;
+}
+
+/* Mobile-only styles */
+@media (max-width: 768px) {
+  .mobile-navbar {
+    display: flex;
   }
+
+  .mobile-popup {
+    display: none; /* This will be controlled via JavaScript for mobile */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .mobile-navbar {
+    display: flex;
+  }
+}
+
+/* Link Styling */
+.nav-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
 
   .logo{
     width: 100%;
@@ -77,6 +158,10 @@
   .logo h1 span{
     color: rgb(255, 77, 0);
   }
+
+  .mobile-logo h1 span{
+    color: rgb(255, 77, 0);
+  }
   
   .nav-sections {
     display: flex;
@@ -87,6 +172,12 @@
   .nav-item{
     border-top: 2px solid #bababa;
     padding: 1rem 2rem;
+  }
+
+  @media (max-width: 768px){
+    .nav-item{
+      border-top: none;
+    }
   }
   
   .nav-item h2 {
