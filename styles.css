@@ -409,7 +409,7 @@
     aspect-ratio: 2/1;
     background-color: #f6f6f6;
     margin-top: 2.5rem;
-    border-radius: 2.5rem;
+    border-radius: 1rem;
   }
 
   @media (max-width: 768px){
@@ -453,6 +453,32 @@
     background-position: center;
   }
 
+  @media (max-width: 768px){
+    .gdg{
+      background-image: url("gdg-mob.png");
+      background-size: cover;
+      background-position: center;
+    }
+  
+    .seren{
+      background-image: url("seren-mob.png");
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .finkie{
+      background-image: url("fk-mob.png");
+      background-size: cover;
+      background-position: center;
+    }
+  
+    .shopez{
+      background-image: url("ez-mob.png");
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
 .design-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -467,7 +493,7 @@
     /* padding: 2rem; */
     /* padding: 0.5rem; */
     text-align: left;
-    border-radius: 2.5rem;
+    border-radius: 1rem;
     /* aspect-ratio: 1 / 1; */
     transition: 0.5s;
 }
