@@ -409,7 +409,7 @@
     aspect-ratio: 2/1;
     background-color: #f6f6f6;
     margin-top: 2.5rem;
-    border-radius: 1rem;
+    border-radius: 0rem;
   }
 
   @media (max-width: 768px){
