@@ -1,0 +1,801 @@
+/* General Styles */
+
+@font-face {
+    font-family: 'Lettera Mono LL';
+    src: url('Lettera\ Mono\ LL.ttf') format('truetype');
+    font-weight: normal; /* You can change this if the font has different weights */
+    font-style: normal; /* Change to italic if applicable */
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  /* Hide scrollbar for all WebKit/Blink browsers (Chrome, Safari, Opera) */
+  body::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+
+  /* Optional: Hide scrollbar in Firefox */
+  body {
+    scrollbar-width: none; /* Hide scrollbar */
+    -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+  }
+  
+  .navbar {
+    width: 15vw;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-right: 2px solid #bababa;
+  }
+
+  @media (max-width: 768px){
+    .navbar{
+      display: none;
+    }
+  }
+
+  .logo{
+    width: 100%;
+  }
+  
+  .logo h1 {
+    padding: 0.5rem 2rem;
+    font-size: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    color: #333;
+    font-family: "Abhaya Libre", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .logo h1 span{
+    color: rgb(255, 77, 0);
+  }
+  
+  .nav-sections {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .nav-item{
+    border-top: 2px solid #bababa;
+    padding: 1rem 2rem;
+  }
+  
+  .nav-item h2 {
+    font-family: 'Lettera Mono LL';
+    color: #323232;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .nav-item ul {
+    font-family: 'Lettera Mono LL';
+    font-size: 0.75rem; /* Adjust as needed */
+    color: #888888;
+    list-style: none;
+  }
+  
+  .nav-item ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .trademark {
+    font-family: 'Lettera Mono LL';
+    background: #f6f6f6;
+    padding: 1rem 1rem;
+    font-size: 0.75rem;
+    text-align: center;
+    color: #888888;
+    border-top: 2px solid #bababa;
+  }
+  
+  .main-content {
+    margin-left: 15vw;
+    width: 85vw;
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 768px){
+    .main-content{
+      margin-left: 0vw;
+      width: 100vw;
+    }
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    background-color: #f6f6f6;
+    overflow: hidden;
+    border-bottom: 2px solid #bababa;
+  }
+
+  @media (max-width: 768px){
+    .hero{
+      height: 60vh;
+    }
+  }
+  
+  .avatar{
+    height: 100%;
+    width: 100%;
+    margin-top: 5vh;
+    position: relative;
+    background-image: url("god.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: bottom; */
+    background-position-x: center;
+    box-shadow: #0c0c0c;
+    z-index: 10;
+}
+
+.shade{
+    height: 50%;
+    width: 100%;
+    z-index: 1;
+    background: linear-gradient(
+        to right, 
+        rgb(255, 255, 255) 0%,    /* Red */
+        rgba(250, 250, 250, 0.4) 15%,  /* Orange with 0 opacity */
+        rgba(255, 255, 0, 0) 20%,  /* Yellow with 0 opacity */
+        rgba(127, 255, 0, 0) 30%,  /* Chartreuse with 0 opacity */
+        rgba(0, 255, 0, 0) 40%,    /* Green with 0 opacity */
+        rgba(0, 255, 127, 0) 50%,  /* Spring Green with 0 opacity */
+        rgba(0, 255, 255, 0) 60%,  /* Cyan with 0 opacity */
+        rgba(0, 127, 255, 0) 70%,  /* Azure with 0 opacity */
+        rgba(0, 0, 255, 0) 80%,    /* Blue with 0 opacity */
+        rgba(250,250,250, 0.4) 85%,
+        rgb(255, 255, 255) 99%   /* Violet */
+    );
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+
+.marquee-container {
+    /* font-family: "Great Vibes", cursive; */
+    font-size: 11rem;
+    font-weight: 600;
+    font-style: italic;
+    color: #dddddd;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    display: flex;
+    position: absolute;
+    top: 50% ;
+    transform: translateY(-50%);
+}
+
+.hindi{
+    top: 75% ;
+    transform: translateY(-35%);
+    font-size: 10rem;
+}
+
+.bangala{
+    top: 25% ;
+    transform: translateY(-65%);
+    font-size: 10rem;
+}
+
+.sep{
+    font-family: "Yeseva One", serif;
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 600;
+    color: #00000062;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.marquee {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+}
+
+.sep-marquee {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+}
+
+.marquee-item {
+    display: inline-block;
+    /* padding-right: 50px; space between items */
+}
+
+.sep-marquee-item {
+    display: inline-block;
+    /* padding-right: 50px; space between items */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+    
+}
+  
+.name{
+  font-size: 7rem;
+  font-family: "Abhaya Libre", serif;
+  font-weight: 400;
+  padding: 2.5rem 2.5rem;
+  color: #363737;
+  border-bottom: 2px solid #bababa;
+}
+
+@media (max-width: 768px){
+  .name{
+    font-size: 4rem;
+    padding: 1rem;
+  }
+}
+
+  /* Projects Section */
+  .project-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem 5rem;
+    border-bottom: 2px solid #bababa;
+  }
+
+  @media (max-width: 768px){
+    .project-item{
+      padding: 1rem 1rem;
+    }
+  }
+  
+  .project-item h3 {
+    font-family: "Abhaya Libre", serif;
+    font-weight: 400;
+    color: #363737;
+    font-size: 5rem;
+    margin-bottom: 10px;
+  }
+
+  .project-item h3 span{
+    color: #9dd040;
+  }
+
+  .project-item p{
+    font-size: 1.25rem;
+    font-family: 'Lettera Mono LL';
+    text-align: center;
+    color: #888888;
+  }
+  
+  .pro-img{
+    width: 100%;
+    aspect-ratio: 2/1;
+    background-color: #f6f6f6;
+    margin-top: 2.5rem;
+    border-radius: 2.5rem;
+  }
+
+  @media (max-width: 768px){
+    .project-item h3{
+      font-size: 3rem;
+      line-height: 3rem;
+      text-align: center;
+    }
+
+    .project-item p{
+      font-size: 1rem;
+    }
+
+    .pro-img{
+      aspect-ratio: 4/3;
+      margin-top: 1rem;
+    }
+  }
+
+  .gdg{
+    background-image: url("community.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .seren{
+    background-image: url("seren.png");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .finkie{
+    background-image: url("finkie.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .shopez{
+    background-image: url("shopex.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+.design-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 5rem;
+    border-bottom: 2px solid #bababa;
+}
+
+.design-grid .box {
+    background-color: #f6f6f6;
+    /* padding: 2rem; */
+    /* padding: 0.5rem; */
+    text-align: left;
+    border-radius: 2.5rem;
+    /* aspect-ratio: 1 / 1; */
+    transition: 0.5s;
+}
+
+.design-grid .span-11{
+    grid-column: span 1;
+    grid-row: span 1;
+    aspect-ratio: 4/3;
+}
+
+.design-grid .span-2 {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+
+@media (max-width: 768px){
+  .design-grid{
+    padding: 1rem;
+  }
+
+  .design-grid{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  .design-grid .span-11{
+    grid-column: span 1;
+    grid-row: span 1;
+    aspect-ratio: 4/3;
+  }
+
+  .design-grid .span-2 {
+      grid-column: span 1;
+      grid-row: span 1;
+      aspect-ratio: 4/3;
+  }
+}
+
+.des-img{
+    height: 100%;
+    width: 100%;
+    background-color: #f6f6f6;
+    border-radius: 3rem;
+    transition-duration: 1s;
+}
+
+.d1 .des-img2{
+    background-image: url("foss.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.d5 .des-img2{
+    background-image: url("sd.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.d2 .des-img{
+    background-image: url("D2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.d3 .des-img{
+    background-image: url("d6.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.d4 .des-img{
+    background-image: url("d4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.d6 .des-img{
+    background-image: url("d3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+  
+  /* About Me */
+  .about-me-content {
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    background-color: #181818;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #bababa;
+  }
+
+  .about-description {
+    padding-right: 1.5rem;
+    padding-left: 5rem;
+    width: 50%;
+    height: 100%;
+    color: #ffffff;
+    font-family: 'Lettera Mono LL';
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  
+  .about-image{
+
+    width: 50%;
+    height: 100%;
+    background-color: aquamarine;
+    background-image: url("SUR_5582.JPG");
+    background-size: cover;
+    background-position: top;
+  }
+  
+  .skills-section h3{
+    font-family: "Abhaya Libre", serif;
+    font-weight: 400;
+    color: #363737;
+    font-size: 5rem;
+    margin: 2.5rem;
+    text-align: center;
+  }
+
+  .skills-section{
+    border-bottom: 2px solid #bababa;
+  }
+
+  @media (max-width: 768px){
+    .about-me-content{
+      flex-direction: column;
+      height: auto;
+      background-color: #bababa;
+    }
+
+    .about-description{
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+      height: auto;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background-color: #181818;
+    }
+
+    .about-image{
+      width: 100%;
+      height: 20rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  
+  
+  /* Skills Grid */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 0rem 5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  @media (max-width: 768px){
+    .skills-section h3{
+      font-size: 3rem;
+      margin: 1rem;
+      margin-bottom: 0rem;
+    }
+
+    .skills-grid{
+      grid-template-columns: repeat(2, 1fr);
+      padding: 1rem;
+      padding-top: 0rem;
+      margin-bottom: 0rem;
+    }
+  }
+
+  .skill-logo{
+    height: 5rem;
+    aspect-ratio: 1;
+    background-image: url("skill-logo-1.svg");
+    background-size: contain;
+  }
+  
+  .skill-card {
+    padding: 1rem ;
+    width: 100%;
+    /* background-color: #9dd040; */
+  }
+
+  @media (max-width: 768px){
+    .skill-card{
+      padding: 1rem;
+    }
+  }
+
+  .skill-name{
+    font-family: "Abhaya Libre", serif;
+    font-weight: 400;
+    color: #363737;
+    font-size: 2rem;
+    margin: 1rem 0rem 0rem 0rem;
+  }
+
+  .skill-det{
+    font-family: 'Lettera Mono LL';
+    font-weight: 400;
+    color: #888888;
+    font-size: 0.75rem;
+  }
+
+  .exp{
+    background-color: #f6f6f6;
+    padding: 0rem5rem;
+    border-bottom: 2px solid #bababa;
+  }
+
+  .exp h3{
+    font-family: "Abhaya Libre", serif;
+    font-weight: 400;
+    color: #363737;
+    font-size: 5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-bottom: 2px solid #bababa;
+  }
+
+  @media (max-width: 768px){
+    .exp h3{
+      font-size: 3rem;
+      padding: 1rem;
+    }
+  }
+
+  .exp-main{
+    width: 100%;
+    /* height: 60vh; */
+    display: flex;
+    flex-direction: row;
+    /* background-color: #888888; */
+  }
+  
+  .exp-list{
+    height: 100%;
+    width: 100%;
+    /* background-color: #919191; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2.5rem 5rem;
+    /* overflow-y: scroll; */
+  }
+
+  .exp-card{
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px){
+    .exp-list{
+      flex-direction: column;
+      flex-wrap: nowrap;
+      padding: 1rem;
+    }
+
+    .exp-card{
+      width: 100%;
+      padding: 1rem 1rem;
+    }
+  }
+
+  .exp-card-logo{
+    height: 5rem;
+    aspect-ratio: 1;
+    margin-right: 1rem;
+    border-radius: 1rem;
+  }
+
+  .gdg-logo{
+    background-image: url("gdg.svg");
+    background-size: contain;
+    background-size: cover;
+  }
+
+  .sukriya-logo{
+    background-image: url("sukriya.svg");
+    background-size: contain;
+    background-size: cover;
+  }
+
+  .fk-logo{
+    background-image: url("fosskol.svg");
+    background-size: contain;
+    background-size: cover;
+  }
+
+  .fc-logo{
+    background-image: url("fossclub.svg");
+    background-size: contain;
+    background-size: cover;
+  }
+
+  .exp-card-det{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    /* background-color: #c0c0c0; */
+    width: 100%;
+  }
+
+  .exp-name{
+    font-family: "Abhaya Libre", serif;
+    font-weight: 400;
+    color: #363737;
+    font-size: 2rem;
+  }
+
+  .exp-more{
+    font-family: 'Lettera Mono LL';
+    font-weight: 400;
+    color: #888888;
+    font-size: 0.75rem;
+  }
+
+  .exp-date{
+    font-family: 'Lettera Mono LL';
+    font-weight: 400;
+    color: #888888;
+    font-size: 0.75rem;
+  }
+
+  .exp-typr{
+    font-family: 'Lettera Mono LL';
+    font-weight: 400;
+    color: #888888;
+    font-size: 0.75rem;
+  }
+
+  .win{
+    /* height: 100%; */
+    height: auto;
+    flex: 1;
+    /* background-color: #9dd040; */
+  }
+
+  /* Connect Section */
+  
+  .mail-me{
+    background-color: #181818;
+    padding: 5rem 5rem;
+    text-align: center;
+    border-bottom: 2px solid #bababa;
+  }
+
+  .mail-me p{
+    color: #ffffff;
+    font-family: 'Lettera Mono LL';
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .mail-me p span{
+    font-family: "Abhaya Libre", serif;
+    font-size: 4rem;
+  }
+  
+  .button-85{
+    font-family: 'Lettera Mono LL';
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #181818;
+    background-color: #ffffff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+  }
+
+  @media (max-width: 768px){
+
+    .mail-me{
+      padding: 2.5rem;
+    }
+
+    .button-85{
+      font-size: 1rem;
+    }
+  }
+
+  .social-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+    color: #181818;
+    font-size: 2rem;
+    font-family: "Abhaya Libre", serif;
+    font-weight: 400;
+    cursor: pointer;
+    border-bottom: 2px solid #bababa;
+  }
+
+  .git{
+    border-bottom: none;
+  }
+
+  .social-item span{
+    color: #181818;
+  }
+  
+  @media (max-width: 768px){
+    .social-item{
+      padding: 1rem;
+    }
+  }
