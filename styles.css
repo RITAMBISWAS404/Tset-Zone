@@ -72,6 +72,7 @@
 .mobile-logo h1 {
   font-size: 3rem;
   line-height: 3rem;
+  font-weight: 400;
   color: #333;
   font-family: "Abhaya Libre", serif;
 }
