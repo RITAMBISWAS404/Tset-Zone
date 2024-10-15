@@ -72,9 +72,10 @@
     left: 0;
     right: 0;
     height: 4rem;
-    background-color: #f4f4f4dd;
+    background-color: #ffffffdd;
     backdrop-filter: blur(10px);
     z-index: 1002;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 24px;
   }
 
   /* Navbar items (left and right icons) */
@@ -206,6 +207,10 @@
     .main-content{
       margin-left: 0vw;
       width: 100vw;
+    }
+
+    .nav-item{
+      border-top: none;
     }
   }
   
@@ -990,4 +995,11 @@
       padding: 1rem;
       font-size: 1.25rem;
     }
+
+    .social-item:hover {
+      font-size: 1.25rem;
+      padding: 1rem 0.75rem;
+      background-color: #f0f0f0; /* Change to your desired hover background color */
+    }
+
   }
