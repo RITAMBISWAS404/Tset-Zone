@@ -522,7 +522,7 @@
 
 @media (max-width: 768px){
   .design-grid{
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
   }
 
   .design-grid{
@@ -667,7 +667,7 @@
     }
 
     .about-description{
-      font-size: 1rem;
+      font-size: 0.75rem;
       padding-left: 1rem;
       padding-right: 1rem;
       width: 100%;
@@ -698,7 +698,7 @@
 
   @media (max-width: 768px){
     .skills-section h3{
-      font-size: 3rem;
+      font-size: 2rem;
       margin: 1rem;
       margin-bottom: 0rem;
     }
@@ -777,11 +777,12 @@
 
   @media (max-width: 768px){
     .exp h3{
-      font-size: 3rem;
-      padding: 1rem;
+      font-size: 2rem;
+      padding: 2rem 1rem 1rem 1rem;
     }
 
     .skill-name{
+      font-size: 1.25rem;
       margin: 0.5rem 0rem 0rem 0rem;
     }
   }
@@ -883,6 +884,12 @@
     font-weight: 400;
     color: #363737;
     font-size: 2rem;
+  }
+
+  @media (max-width: 768px){
+    .exp-name{
+      font-size: 1.25rem;
+    }
   }
 
   .exp-more{
@@ -1002,5 +1009,6 @@
   @media (max-width: 768px){
     .social-item{
       padding: 1rem;
+      font-size: 1.25rem;
     }
   }
