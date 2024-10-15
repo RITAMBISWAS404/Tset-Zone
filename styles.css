@@ -372,7 +372,7 @@
 
 @media (max-width: 768px){
   .name{
-    font-size: 4rem;
+    font-size: 3rem;
     padding: 1rem;
   }
 }
@@ -389,7 +389,7 @@
 
   @media (max-width: 768px){
     .project-item{
-      padding: 2rem 1rem 2rem 1rem;
+      padding: 1rem;
     }
   }
   
@@ -422,13 +422,13 @@
 
   @media (max-width: 768px){
     .project-item h3{
-      font-size: 3rem;
-      line-height: 3rem;
+      font-size: 2rem;
+      line-height: 2rem;
       text-align: center;
     }
 
     .project-item p{
-      font-size: 1rem;
+      font-size: 0.75rem;
     }
 
     .pro-img{
