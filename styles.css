@@ -53,70 +53,79 @@
     border-right: 2px solid #eeeeee;
   }
 
+  .mobile-navbar{
+    display: none;
+  }
+
 @media (max-width: 768px) {
   .navbar {
     display: none;
   }
+
+  /* Mobile Navbar Styles */
+  .mobile-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    background-color: #f4f4f4dd;
+    backdrop-filter: blur(10px);
+    z-index: 1002;
+  }
+
+  /* Navbar items (left and right icons) */
+  .nav-item {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  /* Icons */
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333333;
+    font-size: 12px;
+  }
+
+  .nav-link i {
+    font-size: 1.25rem;
+    color: #333333;
+  }
+
+  .nav-link span{
+    font-family: 'Lettera Mono LL';
+    font-size: 0.5rem;
+    font-weight: 600;
+    color: #333333;
+    margin-top: 0.25rem;
+  }
+
+  /* Active state for navigation */
+  .nav-link.active {
+    color: #ff4d00;
+  }
+
+
+  
 }
 
-/* Mobile Navbar Styles */
-.mobile-navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4rem;
-  background-color: #f6f6f6dd;
-  backdrop-filter: blur(10px);
-  z-index: 1002;
-}
 
-/* Navbar items (left and right icons) */
-.nav-item {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
+  /* Link Styling */
+  .nav-item a {
+    text-decoration: none;
+    color: inherit;
+  }
 
-/* Icons */
-.nav-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #333333;
-  font-size: 12px;
-}
-
-.nav-link i {
-  font-size: 1.25rem;
-  color: #333333;
-}
-
-.nav-link span{
-  font-family: 'Lettera Mono LL';
-  font-size: 0.5rem;
-  color: #333333;
-  margin-top: 0.25rem;
-}
-
-/* Active state for navigation */
-.nav-link.active {
-  color: #ff4d00;
-}
-
-
-/* Link Styling */
-.nav-item a {
-  text-decoration: none;
-  color: inherit;
-}
 
 
   .logo{
@@ -146,6 +155,7 @@
 
   .nav-item{
     padding: 1rem 2rem;
+    border-top: 2px solid #eeeeee;
   }
   
   .nav-item h2 {
@@ -170,6 +180,7 @@
   
   .nav-item ul li {
     margin-bottom: 0.5rem;
+    text-decoration: none;
     transition: all 0.3s ease-in-out;
   }
   
