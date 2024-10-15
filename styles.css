@@ -50,7 +50,7 @@
     left: 0;
     top: 0;
     bottom: 0;
-    border-right: 2px solid #bababa;
+    border-right: 2px solid #eeeeee;
   }
 
   /* Mobile Navbar Styles */
@@ -61,8 +61,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #ffffff;
-  border-top: 2px solid #bababa;
+  background-color: #ffffffdd;
+  backdrop-filter: blur(10px);
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
@@ -72,6 +72,7 @@
 .mobile-logo h1 {
   font-size: 3rem;
   line-height: 3rem;
+  font-weight: 400;
   color: #333;
   font-family: "Abhaya Libre", serif;
 }
@@ -107,7 +108,7 @@
   left: 0;
   width: 100%;
   background-color: #ffffff;
-  border-top: 2px solid #bababa;
+  border-top: 2px solid #eeeeee;
   z-index: 1001;
 }
 
@@ -170,7 +171,7 @@
   }
 
   .nav-item{
-    border-top: 2px solid #bababa;
+    border-top: 2px solid #eeeeee;
     padding: 1rem 2rem;
   }
 
@@ -212,7 +213,7 @@
     font-size: 0.75rem;
     text-align: center;
     color: #888888;
-    border-top: 2px solid #bababa;
+    border-top: 2px solid #eeeeee;
   }
   
   .main-content {
@@ -238,7 +239,7 @@
     height: 95vh;
     background-color: #f6f6f6;
     overflow: hidden;
-    border-bottom: 2px solid #bababa;
+    border-bottom: 2px solid #eeeeee;
   }
 
   @media (max-width: 768px){
@@ -367,7 +368,7 @@
   font-weight: 400;
   padding: 2.5rem 2.5rem;
   color: #363737;
-  border-bottom: 2px solid #bababa;
+  border-bottom: 2px solid #eeeeee;
 }
 
 @media (max-width: 768px){
@@ -384,7 +385,7 @@
     align-items: center;
     flex-direction: column;
     padding: 5rem 5rem;
-    border-bottom: 2px solid #bababa;
+    border-bottom: 2px solid #eeeeee;
   }
 
   @media (max-width: 768px){
@@ -493,7 +494,7 @@
     grid-template-rows: repeat(4, 1fr);
     gap: 1rem;
     padding: 5rem;
-    border-bottom: 2px solid #bababa;
+    border-bottom: 2px solid #eeeeee;
 }
 
 .design-grid .box {
@@ -663,7 +664,7 @@
     .about-me-content{
       flex-direction: column;
       height: auto;
-      background-color: #bababa;
+      background-color: #eeeeee;
     }
 
     .about-description{
@@ -762,7 +763,7 @@
   .exp{
     background-color: #f6f6f6;
     padding: 0rem5rem;
-    border-bottom: 2px solid #bababa;
+    border-bottom: 2px solid #eeeeee;
   }
 
   .exp h3{
@@ -987,7 +988,7 @@
     font-family: "Abhaya Libre", serif;
     font-weight: 400;
     cursor: pointer;
-    border-bottom: 2px solid #bababa;
+    border-bottom: 2px solid #eeeeee;
     transition: font-size 0.3s ease, padding 0.3s ease, background-color 0.3s ease;
   }
   
