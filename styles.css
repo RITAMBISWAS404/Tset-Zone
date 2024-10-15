@@ -72,7 +72,6 @@
 .mobile-logo h1 {
   font-size: 3rem;
   line-height: 3rem;
-  font-weight: 400;
   color: #333;
   font-family: "Abhaya Libre", serif;
 }
@@ -245,6 +244,7 @@
   @media (max-width: 768px){
     .hero{
       height: 60vh;
+      border-bottom: none;
     }
   }
   
@@ -606,6 +606,11 @@
 }
   
   /* About Me */
+
+  .about-me h2{
+    border-bottom: none;
+  }
+
   .about-me-content {
     height: 60vh;
     display: flex;
@@ -613,7 +618,7 @@
     background-color: #181818;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid #bababa;
+    /* border-bottom: 2px solid #bababa; */
   }
 
   .about-description {
@@ -652,10 +657,6 @@
     font-size: 5rem;
     margin: 2.5rem;
     text-align: center;
-  }
-
-  .skills-section{
-    border-bottom: 2px solid #bababa;
   }
 
   @media (max-width: 768px){
@@ -705,7 +706,6 @@
     .skills-grid{
       grid-template-columns: repeat(2, 1fr);
       padding: 1rem;
-      padding-top: 0rem;
       margin-bottom: 0rem;
     }
   }
@@ -724,6 +724,7 @@
     width: 100%;
     border-radius: 1rem;
     transition: all 0.3s ease-in-out;
+    border: 2px solid #eeeeee;
     /* background-color: #9dd040; */
   }
 
@@ -771,7 +772,7 @@
     font-size: 5rem;
     padding: 2.5rem;
     text-align: center;
-    border-bottom: 2px solid #bababa;
+    /* border-bottom: 2px solid #bababa; */
   }
 
   @media (max-width: 768px){
@@ -815,6 +816,7 @@
     padding: 1rem;
     gap: 1rem;
     border-radius: 1rem;
+    border: 2px solid #e6e6e6;
     transition: all 0.3s ease-in-out;
   }
 
@@ -828,7 +830,6 @@
       flex-direction: column;
       flex-wrap: nowrap;
       padding: 1rem;
-      gap: 0rem;
     }
 
     .exp-card{
@@ -913,12 +914,16 @@
   }
 
   /* Connect Section */
+
+  .connect h2{
+    border-bottom: none;
+  }
   
   .mail-me{
     background-color: #181818;
     padding: 5rem 5rem;
     text-align: center;
-    border-bottom: 2px solid #bababa;
+    /* border-bottom: 2px solid #bababa; */
   }
 
   .mail-me p{
