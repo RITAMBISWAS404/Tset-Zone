@@ -750,11 +750,7 @@
   transform: translateY(50px); /* Move the card down */
 }
 
-/* Skill card on hover */
-.skill-card:hover {
-  background-color: #eeeeee;
-  transform: translateY(-5px);
-}
+
 
 /* Skill card when in view (this triggers the animation) */
 .skill-card.in-view {
@@ -799,6 +795,13 @@
   font-weight: 400;
   color: #888888;
   font-size: 0.75rem;
+}
+
+/* Skill card on hover */
+.skill-card:hover {
+  background-color: #eeeeee;
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-out;
 }
 
 
@@ -850,9 +853,8 @@
     /* overflow-y: scroll; */
   }
 
-  .exp-card{
+  .exp-card {
     display: flex;
-    /* width: 50%; */
     min-width: 40%;
     flex: 1;
     flex-direction: row;
@@ -861,13 +863,17 @@
     gap: 1rem;
     border-radius: 1rem;
     border: 2px solid #e6e6e6;
-    transition: all 0.3s ease-in-out;
-  }
+    transition: all 0.3s ease-in-out, opacity 1s ease-out, transform 1s ease-out;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Slide up from below */
+}
 
-  .exp-card:hover{
-    transform: translateY(-5px);
-    background-color: #e6e6e6;
-  }
+.exp-card.in-view {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide into position */
+}
+
+  
 
   @media (max-width: 768px){
     .exp-list{
@@ -956,6 +962,12 @@
     font-size: 0.75rem;
   }
 
+  .exp-card:hover{
+    transform: translateY(-5px);
+    background-color: #e6e6e6;
+    transition: transform 0.3s ease-out;
+  }
+
   .win{
     /* height: 100%; */
     height: auto;
@@ -1031,8 +1043,15 @@
     font-weight: 400;
     cursor: pointer;
     border-bottom: 2px solid #eeeeee;
-    transition: font-size 0.3s ease, padding 0.3s ease, background-color 0.3s ease;
-  }
+    transition: font-size 0.3s ease, padding 0.3s ease, background-color 0.3s ease, opacity 1s ease-out, transform 1s ease-out;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Slide up from below */
+}
+
+.social-item.in-view {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide into position */
+}
   
   .social-item:hover {
     font-size: 2rem;
