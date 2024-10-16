@@ -27,3 +27,31 @@ navLinks.forEach(link => {
     this.classList.add('active');
   });
 });
+
+// Select all skill cards with the 'animate' class
+const skillCards = document.querySelectorAll('.animate');
+
+// Function to check if an element is in the viewport
+function isInView(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0
+    );
+}
+
+// Function to add 'in-view' class when the element is scrolled into view
+function handleScroll() {
+    skillCards.forEach(skillCard => {
+        if (isInView(skillCard)) {
+            skillCard.classList.add('in-view');
+        }
+    });
+}
+
+// Add scroll event listener
+window.addEventListener('scroll', handleScroll);
+
+// Trigger the scroll function on page load (for any already in view)
+handleScroll();
+
