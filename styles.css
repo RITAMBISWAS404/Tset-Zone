@@ -249,7 +249,7 @@
 @media (max-width: 768px){
   .avatar{
     background-size: cover;
-    margin-top: 4.25rem;
+    margin-top: 8rem;
     background-position-y: bottom;
   }
 }
@@ -257,13 +257,14 @@
   .video-container{
     position: absolute;
     width: 100%;
-    top: 9.5rem;
+    top: 9.6rem;
     height: auto;
     z-index: 9;
   }
 
   .video-container video{
-    width: 22.5%;
+    width: 46%;
+    border-radius: 4rem;
   }
 
   .hue-filter {
