@@ -257,9 +257,13 @@
   .video-container{
     position: absolute;
     width: 100%;
-    top: 10rem;
+    top: 9.5rem;
     height: auto;
     z-index: 9;
+  }
+
+  .video-container video{
+    width: 22.5%;
   }
 
   .hue-filter {
@@ -382,64 +386,78 @@
 }
 
   /* Projects Section */
+  /* Project item basic styling */
+.project-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem 5rem;
+  border-bottom: 2px solid #eeeeee;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Move down initially */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+@media (max-width: 768px) {
   .project-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 5rem 5rem;
-    border-bottom: 2px solid #eeeeee;
-  }
-
-  @media (max-width: 768px){
-    .project-item{
       padding: 1rem;
-    }
   }
-  
+}
+
+/* Project item h3 styles */
+.project-item h3 {
+  font-family: "Abhaya Libre", serif;
+  font-weight: 400;
+  color: #363737;
+  font-size: 5rem;
+  margin-bottom: 10px;
+}
+
+.project-item h3 span {
+  color: #9dd040;
+}
+
+/* Project item paragraph styling */
+.project-item p {
+  font-size: 1.25rem;
+  font-family: 'Lettera Mono LL';
+  text-align: center;
+  color: #888888;
+}
+
+/* Project image styling */
+.pro-img {
+  width: 100%;
+  aspect-ratio: 2/1;
+  background-color: #f6f6f6;
+  margin-top: 2.5rem;
+  border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
   .project-item h3 {
-    font-family: "Abhaya Libre", serif;
-    font-weight: 400;
-    color: #363737;
-    font-size: 5rem;
-    margin-bottom: 10px;
-  }
-
-  .project-item h3 span{
-    color: #9dd040;
-  }
-
-  .project-item p{
-    font-size: 1.25rem;
-    font-family: 'Lettera Mono LL';
-    text-align: center;
-    color: #888888;
-  }
-  
-  .pro-img{
-    width: 100%;
-    aspect-ratio: 2/1;
-    background-color: #f6f6f6;
-    margin-top: 2.5rem;
-    border-radius: 1rem;
-  }
-
-  @media (max-width: 768px){
-    .project-item h3{
       font-size: 2rem;
       line-height: 2rem;
       text-align: center;
-    }
+  }
 
-    .project-item p{
+  .project-item p {
       font-size: 0.75rem;
-    }
+  }
 
-    .pro-img{
+  .pro-img {
       aspect-ratio: 4/3;
       margin-top: 1rem;
-    }
   }
+}
+
+/* When the project item scrolls into view */
+.project-item.in-view {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Slide up into place */
+}
+
 
   .gdg{
     background-image: url("community.png");
@@ -500,16 +518,23 @@
     border-bottom: 2px solid #eeeeee;
 }
 
+/* Box element basic styling */
 .design-grid .box {
-    background-color: #9dd040;
-    /* padding: 2rem; */
-    /* padding: 0.5rem; */
-    text-align: left;
-    border-radius: 1rem;
-    /* aspect-ratio: 1 / 1; */
-    transition: 0.5s;
-    overflow: hidden;
+  background-color: #9dd040;
+  text-align: left;
+  border-radius: 1rem;
+  transition: all 0.5s ease-out, opacity 1s ease-out, transform 1s ease-out;
+  overflow: hidden;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Initially moved down */
 }
+
+/* Box when it is in view (animate) */
+.design-grid .box.in-view {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Slide into place */
+}
+
 
 .design-grid .span-11{
     grid-column: span 1;
@@ -714,54 +739,68 @@
     }
   }
 
-  .skill-logo{
-    height: 5rem;
-    width: 100%;
-    aspect-ratio: 1;
-    background-image: url("skill-logo-1.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  
-  .skill-card {
-    padding: 1rem ;
-    width: 100%;
-    border-radius: 1rem;
-    transition: all 0.3s ease-in-out;
-    border: 2px solid #eeeeee;
-    /* background-color: #9dd040; */
-  }
+  /* Skill card basic styling */
+.skill-card {
+  padding: 1rem;
+  width: 100%;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out, opacity 1s ease-out, transform 1s ease-out;
+  border: 2px solid #eeeeee;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Move the card down */
+}
 
-  .skill-card:hover{
-    background-color: #eeeeee;
-    transform: translateY(-5px);
-  }
+/* Skill card on hover */
+.skill-card:hover {
+  background-color: #eeeeee;
+  transform: translateY(-5px);
+}
 
-  @media (max-width: 768px){
-    .skill-logo{
+/* Skill card when in view (this triggers the animation) */
+.skill-card.in-view {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Slide into place */
+}
+
+/* Skill logo styling */
+.skill-logo {
+  height: 5rem;
+  width: 100%;
+  aspect-ratio: 1;
+  background-image: url("skill-logo-1.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .skill-logo {
       background-position: center;
-    }
+  }
 
-    .skill-card{
+  .skill-card {
       padding: 1rem 0rem;
       text-align: center;
-    }
   }
+}
 
-  .skill-name{
-    font-family: "Abhaya Libre", serif;
-    font-weight: 400;
-    color: #363737;
-    font-size: 2rem;
-    margin: 1rem 0rem 0rem 0rem;
-  }
+/* Skill name styling */
+.skill-name {
+  font-family: "Abhaya Libre", serif;
+  font-weight: 400;
+  color: #363737;
+  font-size: 2rem;
+  margin: 1rem 0rem 0rem 0rem;
+}
 
-  .skill-det{
-    font-family: 'Lettera Mono LL';
-    font-weight: 400;
-    color: #888888;
-    font-size: 0.75rem;
-  }
+/* Skill details styling */
+.skill-det {
+  font-family: 'Lettera Mono LL';
+  font-weight: 400;
+  color: #888888;
+  font-size: 0.75rem;
+}
+
 
   .exp{
     background-color: #f6f6f6;
