@@ -237,7 +237,7 @@
     width: 100%;
     margin-top: 5vh;
     position: relative;
-    background-image: url("shell.png");
+    background-image: url("god.png");
     background-size: contain;
     background-repeat: no-repeat;
     /* background-position: bottom; */
@@ -249,15 +249,16 @@
 @media (max-width: 768px){
   .avatar{
     background-size: cover;
-    margin-top: 8rem;
+    margin-top: 3.5rem;
     background-position-y: bottom;
   }
 }
 
   .video-container{
+    display: none;
     position: absolute;
     width: 100%;
-    top: 9rem;
+    top: 9.6rem;
     height: auto;
     z-index: 9;
   }
@@ -302,7 +303,7 @@
     font-size: 11rem;
     font-weight: 600;
     font-style: italic;
-    color: #dddddd;
+    color: #e6e6e6;
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
@@ -428,12 +429,57 @@
 }
 
 /* Project image styling */
+
+.pro-img button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Lettera Mono LL';
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #181818;
+    background-color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.pro-img button p{
+  font-family: 'Lettera Mono LL';
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #181818;
+}
+
+@media (max-width: 768px){
+  .pro-img button{
+    border-radius: 0.5rem;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .pro-img button p{
+    display: none;
+  }
+}
+
+.pro-img button:hover{
+  background-color: #e3e3e3;
+}
+
 .pro-img {
   width: 100%;
   aspect-ratio: 2/1;
   background-color: #f6f6f6;
   margin-top: 2.5rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
+  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -450,6 +496,7 @@
   .pro-img {
       aspect-ratio: 4/3;
       margin-top: 1rem;
+      border-radius: 1rem;
   }
 }
 
@@ -523,7 +570,7 @@
 .design-grid .box {
   background-color: #9dd040;
   text-align: left;
-  border-radius: 1rem;
+  border-radius: 2rem;
   transition: all 0.5s ease-out, opacity 1s ease-out, transform 1s ease-out;
   overflow: hidden;
   opacity: 0; /* Initially hidden */
@@ -558,6 +605,10 @@
   .design-grid{
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
+  }
+
+  .design-grid .box{
+    border-radius: 1rem;
   }
 
   .design-grid .span-11{
@@ -642,7 +693,7 @@
   }
 
   .about-me-content {
-    height: 60vh;
+    height: 65vh;
     display: flex;
     flex-direction: row;
     background-color: #181818;
