@@ -242,6 +242,7 @@
     background-repeat: no-repeat;
     /* background-position: bottom; */
     background-position-x: center;
+    background-position-y: bottom;
     box-shadow: #0c0c0c;
     z-index: 10;
 }
@@ -443,14 +444,16 @@
     background-color: #ffffff;
     border: none;
     padding: 0.5rem 1rem;
-    border-radius: 1rem;
+    border-radius: 50%;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0.5rem;
+    right: 0.5rem;
+    aspect-ratio: 1;
     transition: all 0.3s ease-in-out;
 }
 
 .pro-img button p{
+  display: none;
   font-family: 'Lettera Mono LL';
   font-size: 1.25rem;
   font-weight: 400;
@@ -459,7 +462,8 @@
 
 @media (max-width: 768px){
   .pro-img button{
-    border-radius: 0.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
     top: 0.5rem;
     right: 0.5rem;
   }
@@ -470,7 +474,7 @@
 }
 
 .pro-img button:hover{
-  background-color: #e3e3e3;
+  color: tomato;
 }
 
 .pro-img {
@@ -496,7 +500,7 @@
   .pro-img {
       aspect-ratio: 4/3;
       margin-top: 1rem;
-      border-radius: 1rem;
+      border-radius: 2rem;
   }
 }
 
@@ -608,7 +612,7 @@
   }
 
   .design-grid .box{
-    border-radius: 1rem;
+    border-radius: 2rem;
   }
 
   .design-grid .span-11{
@@ -813,11 +817,19 @@
 /* Skill logo styling */
 .skill-logo {
   height: 5rem;
-  width: 100%;
+  /* width: 100%; */
   aspect-ratio: 1;
-  background-image: url("skill-logo-1.svg");
+  /* background-image: url("skill-logo-1.svg"); */
+  background-color: #181818;
+  border-radius: 50%;
+  color: #ffffff;
   background-repeat: no-repeat;
   background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Media queries for responsiveness */
@@ -829,6 +841,10 @@
   .skill-card {
       padding: 1rem 0rem;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
   }
 }
 
@@ -854,6 +870,10 @@
   background-color: #eeeeee;
   transform: translateY(-5px);
   transition: transform 0.3s ease-out;
+}
+
+.skill-card:hover .skill-logo{
+  font-size: 2.25rem;
 }
 
 
@@ -882,6 +902,10 @@
     .skill-name{
       font-size: 1.25rem;
       margin: 0.5rem 0rem 0rem 0rem;
+    }
+
+    .skill-det{
+      padding: 0rem 0.75rem;
     }
   }
 
