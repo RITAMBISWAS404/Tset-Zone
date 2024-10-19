@@ -366,7 +366,6 @@
 @media (max-width: 768px){
   .intro{
     padding: 1rem;
-    padding-top: 2.5rem;
     position: absolute;
     top: 0%;
     transform: translateY(0%);
