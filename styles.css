@@ -595,7 +595,7 @@
     display: flex;
     position: absolute;
     top: 50% ;
-    transform: translateY(40%);
+    transform: translateY(30%);
 }
 
 .hindi{
