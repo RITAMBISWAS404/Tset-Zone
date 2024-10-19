@@ -599,7 +599,7 @@
     display: flex;
     position: absolute;
     top: 50% ;
-    transform: translateY(20%);
+    transform: translateY(25%);
 }
 
 .hindi{
