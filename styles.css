@@ -257,7 +257,7 @@
 .avatar-mob{
   height: 100%;
     width: 100%;
-    margin-top: 5vh;
+    margin-top: 0rem;
     position: relative;
     background-image: url("me_phone.png");
     background-size: contain;
